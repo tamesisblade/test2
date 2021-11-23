@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "direcciones",
+  "info": {
+    "name": "Direcciones"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "latitud": {
+      "type": "float"
+    },
+    "longitud": {
+      "type": "float"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "empresa": {
+      "via": "direccion",
+      "model": "empresas"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordenes",
+  "info": {
+    "name": "Ordenes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "estado": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "facturacion_usuario": {
+      "model": "facturacion-usuarios"
+    },
+    "direcciones_usuario": {
+      "model": "direcciones-usuarios"
+    },
+    "pagado": {
+      "type": "boolean",
+      "default": false
+    },
+    "payphone": {
+      "model": "payphone"
+    },
+    "empresa": {
+      "unique": true,
+      "model": "empresas"
+    },
+    "entregaEmpresa": {
+      "type": "boolean",
+      "default": false
+    },
+    "entregaScooter": {
+      "type": "boolean",
+      "default": false
+    },
+    "entregaFinalizado": {
+      "type": "boolean",
+      "default": false
+    },
+    "pagoEfectivo": {
+      "type": "boolean",
+      "default": true
+    },
+    "sucursal": {
+      "model": "sucursales"
+    },
+    "repartidor": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "distancia_empresa": {
+      "type": "string"
+    },
+    "duracion_empresa": {
+      "type": "string"
+    },
+    "distancia_cliente": {
+      "type": "string"
+    },
+    "duracion_cliente": {
+      "type": "string"
+    },
+    "total": {
+      "type": "decimal",
+      "default": 0
+    },
+    "subtotal_delivery": {
+      "type": "decimal",
+      "default": 0
+    },
+    "total_delivery": {
+      "type": "decimal",
+      "default": 0
+    },
+    "km_delivery": {
+      "type": "decimal",
+      "default": 0
+    },
+    "configuracion": {
+      "type": "json"
+    },
+    "polyline": {
+      "type": "string"
+    },
+    "porcentaje": {
+      "type": "decimal"
+    },
+    "comisionBmas": {
+      "type": "decimal"
+    },
+    "id_orden_contifico": {
+      "type": "string"
+    },
+    "ordenes_productos": {
+      "collection": "ordenes-productos",
+      "via": "orden"
+    },
+    "pago_recibido": {
+      "type": "boolean",
+      "default": false
+    },
+    "acepta_empresa": {
+      "type": "datetime"
+    },
+    "acepta_repartidor": {
+      "type": "datetime"
+    },
+    "recoge_repartidor": {
+      "type": "datetime"
+    },
+    "entrega_repartidor": {
+      "type": "datetime"
+    },
+    "efectivo_cliente": {
+      "type": "decimal",
+      "default": 0
+    }
+  }
+}

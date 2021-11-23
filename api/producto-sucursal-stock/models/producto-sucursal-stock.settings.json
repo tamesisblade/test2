@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "producto_sucursal_stocks",
+  "info": {
+    "name": "ProductoSucursalStock"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "producto": {
+      "model": "productos"
+    },
+    "sucursale": {
+      "model": "sucursales"
+    },
+    "stock": {
+      "type": "integer"
+    }
+  }
+}

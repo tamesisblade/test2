@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/productos",
+      "handler": "productos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/productos/count",
+      "handler": "productos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/productos/:id",
+      "handler": "productos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/productos",
+      "handler": "productos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/productos/:id",
+      "handler": "productos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/productos/:id",
+      "handler": "productos.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/addproducto/:idusuario&:producto&:empresa",
+      "handler": "productos.addProducto",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/listproduts/:idusuario&:empresa",
+      "handler": "productos.productosUsers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/addpro/:id",
+      "handler": "productos.addPro",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/removepro/:id",
+      "handler": "productos.removePro",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sucursales",
+  "info": {
+    "name": "Sucursales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "integer"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "direccion": {
+      "model": "direcciones"
+    },
+    "empresa": {
+      "via": "sucursales",
+      "model": "empresas"
+    }
+  }
+}

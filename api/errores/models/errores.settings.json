@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "errores",
+  "info": {
+    "name": "Errores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "error": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordenes_productos",
+  "info": {
+    "name": "OrdenesProductos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "orden": {
+      "via": "ordenes_productos",
+      "model": "ordenes"
+    },
+    "producto": {
+      "model": "productos"
+    },
+    "cantidad": {
+      "default": 1,
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

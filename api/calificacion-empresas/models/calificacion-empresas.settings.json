@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calificacion_empresas",
+  "info": {
+    "name": "CalificacionEmpresas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "puntaje": {
+      "type": "integer"
+    },
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "empresa": {
+      "via": "calificacion_empresas",
+      "model": "empresas"
+    },
+    "comentario": {
+      "type": "text"
+    }
+  }
+}

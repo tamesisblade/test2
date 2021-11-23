@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-saldos",
+      "handler": "user-saldo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-saldos/count",
+      "handler": "user-saldo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-saldos/:id",
+      "handler": "user-saldo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-saldos",
+      "handler": "user-saldo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-saldos/:id",
+      "handler": "user-saldo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-saldos/:id",
+      "handler": "user-saldo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

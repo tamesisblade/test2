@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horarios",
+  "info": {
+    "name": "horarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "porcentaje": {
+      "type": "integer"
+    },
+    "h_inicio": {
+      "type": "time"
+    },
+    "h_final": {
+      "type": "time"
+    },
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

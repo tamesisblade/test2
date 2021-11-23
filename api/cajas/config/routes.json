@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cajas",
+      "handler": "cajas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cajas/count",
+      "handler": "cajas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cajas/:id",
+      "handler": "cajas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cajas",
+      "handler": "cajas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cajas/:id",
+      "handler": "cajas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cajas/:id",
+      "handler": "cajas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

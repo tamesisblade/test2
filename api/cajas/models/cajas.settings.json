@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cajas",
+  "info": {
+    "name": "Cajas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "repartidor": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "debe": {
+      "type": "decimal"
+    },
+    "haber": {
+      "type": "decimal"
+    }
+  }
+}

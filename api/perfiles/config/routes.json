@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/perfiles",
+      "handler": "perfiles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfiles/count",
+      "handler": "perfiles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfiles/:id",
+      "handler": "perfiles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/perfiles",
+      "handler": "perfiles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/perfiles/:id",
+      "handler": "perfiles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/perfiles/:id",
+      "handler": "perfiles.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/validar/:cedula&:celular&:email&:nombres&:password",
+      "handler": "perfiles.validar",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

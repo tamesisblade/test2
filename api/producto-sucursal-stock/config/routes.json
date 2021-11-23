@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/producto-sucursal-stocks",
+      "handler": "producto-sucursal-stock.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-sucursal-stocks/count",
+      "handler": "producto-sucursal-stock.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-sucursal-stocks/:id",
+      "handler": "producto-sucursal-stock.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/producto-sucursal-stocks",
+      "handler": "producto-sucursal-stock.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/producto-sucursal-stocks/:id",
+      "handler": "producto-sucursal-stock.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/producto-sucursal-stocks/:id",
+      "handler": "producto-sucursal-stock.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

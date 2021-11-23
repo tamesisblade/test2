@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perfiles",
+  "info": {
+    "name": "Perfiles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    }
+  }
+}

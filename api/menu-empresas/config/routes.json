@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/menu-empresas",
+      "handler": "menu-empresas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/menu-empresas/count",
+      "handler": "menu-empresas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/menu-empresas/:id",
+      "handler": "menu-empresas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/menu-empresas",
+      "handler": "menu-empresas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/menu-empresas/:id",
+      "handler": "menu-empresas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/menu-empresas/:id",
+      "handler": "menu-empresas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

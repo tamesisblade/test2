@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mensajes",
+  "info": {
+    "name": "Mensajes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "orden": {
+      "model": "ordenes"
+    },
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "estado": {
+      "type": "boolean",
+      "default": true
+    },
+    "mensaje": {
+      "type": "string"
+    }
+  }
+}

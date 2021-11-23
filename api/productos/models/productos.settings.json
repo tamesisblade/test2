@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "Productos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codigo": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "empresa": {
+      "via": "productos",
+      "model": "empresas"
+    },
+    "precio": {
+      "type": "float"
+    },
+    "categorias": {
+      "collection": "categorias",
+      "via": "productos"
+    },
+    "promocione": {
+      "model": "promociones",
+      "via": "productos"
+    },
+    "extras_productos": {
+      "collection": "opciones-productos"
+    },
+    "opciones": {
+      "type": "json"
+    },
+    "id_producto_contifico": {
+      "type": "string"
+    }
+  }
+}

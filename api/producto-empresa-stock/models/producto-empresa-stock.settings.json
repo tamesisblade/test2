@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "producto_empresa_stocks",
+  "info": {
+    "name": "ProductoEmpresaStock"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "producto": {
+      "model": "productos"
+    },
+    "empresa": {
+      "model": "empresas"
+    },
+    "stock": {
+      "type": "integer"
+    }
+  }
+}

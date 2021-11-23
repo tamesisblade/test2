@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entregas",
+  "info": {
+    "name": "entrega",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "cliente": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "date"
+    },
+    "hora": {
+      "type": "time"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "origen": {
+      "type": "string"
+    },
+    "destino": {
+      "type": "string"
+    },
+    "cantidadkms": {
+      "type": "decimal"
+    },
+    "valorkm": {
+      "type": "decimal"
+    },
+    "costokms": {
+      "type": "decimal"
+    },
+    "kmadicional": {
+      "type": "decimal"
+    },
+    "observacion": {
+      "type": "json"
+    },
+    "empresa": {
+      "model": "empresas"
+    },
+    "bmasValorkm": {
+      "type": "decimal"
+    },
+    "bmasCalculokms": {
+      "type": "decimal"
+    },
+    "valorTotalEntrega": {
+      "type": "decimal"
+    }
+  }
+}

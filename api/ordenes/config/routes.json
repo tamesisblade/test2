@@ -1,0 +1,124 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ordenes",
+      "handler": "ordenes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordenes/count",
+      "handler": "ordenes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordenes/:id",
+      "handler": "ordenes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordenes",
+      "handler": "ordenes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ordenes/:id",
+      "handler": "ordenes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ordenes/:id",
+      "handler": "ordenes.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orden/:id",
+      "handler": "ordenes.orden",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pedidos/:lat&:long",
+      "handler": "ordenes.pedidosDir",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pedidosuser/:usuario",
+      "handler": "ordenes.pedidosUsr",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pedidosrep/:repartidor",
+      "handler": "ordenes.pedidoUsr",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pago/:idempresa&:idusuario",
+      "handler": "ordenes.calcularPago",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordenesDespacho",
+      "handler": "ordenes.ordenesDespacho",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordenescooter/:idorden&:idusuario",
+      "handler": "ordenes.aceptarOrden",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordenbuscar/:idusuario",
+      "handler": "ordenes.buscarOrden",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/finalizar/:idorden&:efectivo",
+      "handler": "ordenes.finalizarOrden",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

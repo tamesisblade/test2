@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extras_productos",
+  "info": {
+    "name": "ExtrasProductos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "estado": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

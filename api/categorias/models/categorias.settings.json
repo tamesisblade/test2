@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "name": "Categorias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "icono": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "productos": {
+      "via": "categorias",
+      "collection": "productos",
+      "dominant": true
+    },
+    "empresas": {
+      "via": "categorias",
+      "collection": "empresas"
+    }
+  }
+}

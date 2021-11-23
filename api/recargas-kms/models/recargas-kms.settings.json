@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recargas_kms",
+  "info": {
+    "name": "RecargasKms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "cantidadkms": {
+      "type": "decimal"
+    },
+    "valorkm": {
+      "type": "decimal"
+    },
+    "kmcosto": {
+      "type": "decimal"
+    },
+    "banco": {
+      "type": "string"
+    },
+    "kmsfuerarango": {
+      "type": "decimal"
+    },
+    "valoradicional": {
+      "type": "decimal"
+    },
+    "calculoadicional": {
+      "type": "decimal"
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "iva": {
+      "type": "decimal"
+    },
+    "totaliva": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "valormotorizado": {
+      "type": "decimal"
+    },
+    "totalmotorizado": {
+      "type": "decimal"
+    },
+    "bmasganancia": {
+      "type": "decimal"
+    },
+    "empresa": {
+      "model": "empresas"
+    },
+    "observacion": {
+      "type": "json"
+    }
+  }
+}

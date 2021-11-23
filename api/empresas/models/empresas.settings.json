@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "name": "Empresas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "pagina_web": {
+      "type": "text"
+    },
+    "ruc": {
+      "type": "integer"
+    },
+    "telefono": {
+      "type": "integer"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "direccion": {
+      "model": "direcciones",
+      "via": "empresa"
+    },
+    "productos": {
+      "collection": "productos",
+      "via": "empresa"
+    },
+    "categorias": {
+      "collection": "categorias",
+      "via": "empresas",
+      "dominant": true
+    },
+    "sucursales": {
+      "collection": "sucursales",
+      "via": "empresa"
+    },
+    "configuracion": {
+      "model": "configuracion"
+    },
+    "estado": {
+      "type": "boolean",
+      "default": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "empresas"
+    },
+    "comisionBmas": {
+      "type": "decimal"
+    },
+    "horario_empresas": {
+      "collection": "horario-empresas",
+      "via": "empresa"
+    },
+    "calificacion_empresas": {
+      "collection": "calificacion-empresas",
+      "via": "empresa"
+    },
+    "aceptar_pedidos": {
+      "type": "boolean",
+      "default": false
+    },
+    "totalkms": {
+      "type": "decimal"
+    }
+  }
+}

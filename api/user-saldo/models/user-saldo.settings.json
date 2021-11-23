@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_saldos",
+  "info": {
+    "name": "UserSaldo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "monto": {
+      "type": "decimal"
+    },
+    "formapago": {
+      "type": "string"
+    },
+    "banco": {
+      "type": "richtext"
+    },
+    "referencia": {
+      "type": "string"
+    },
+    "observacion": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "date"
+    },
+    "tipo": {
+      "type": "integer"
+    }
+  }
+}

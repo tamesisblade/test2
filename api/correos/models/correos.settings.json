@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "correos",
+  "info": {
+    "name": "Correos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "validacion": {
+      "type": "boolean"
+    }
+  }
+}

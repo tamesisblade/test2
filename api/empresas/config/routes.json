@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/empresas",
+      "handler": "empresas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empresas/count",
+      "handler": "empresas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empresas/:id",
+      "handler": "empresas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/empresas",
+      "handler": "empresas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/empresas/:id",
+      "handler": "empresas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/empresas/:id",
+      "handler": "empresas.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empresasdir/:lat&:long",
+      "handler": "empresas.findOneDir",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empresasdircat/:lat&:long&:categoria",
+      "handler": "empresas.findOneDirCat",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payphones",
+  "info": {
+    "name": "payphone",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "celular": {
+      "type": "string"
+    }
+  }
+}

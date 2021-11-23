@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "direcciones_usuarios",
+  "info": {
+    "name": "DireccionesUsuarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "latitud": {
+      "type": "float"
+    },
+    "longitud": {
+      "type": "float"
+    },
+    "referencia": {
+      "type": "text"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "direcciones_usuarios"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "ordene": {
+      "model": "ordenes"
+    }
+  }
+}

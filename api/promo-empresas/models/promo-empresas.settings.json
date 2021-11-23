@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promo_empresas",
+  "info": {
+    "name": "PromoEmpresas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "fecha_fin": {
+      "type": "datetime"
+    },
+    "Estado": {
+      "type": "boolean"
+    },
+    "Imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "empresa": {
+      "model": "empresas"
+    }
+  }
+}

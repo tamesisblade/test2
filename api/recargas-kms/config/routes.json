@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/recargas-kms",
+      "handler": "recargas-kms.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recargas-kms/count",
+      "handler": "recargas-kms.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recargas-kms/:id",
+      "handler": "recargas-kms.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recargas-kms",
+      "handler": "recargas-kms.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/recargas-kms/:id",
+      "handler": "recargas-kms.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/recargas-kms/:id",
+      "handler": "recargas-kms.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

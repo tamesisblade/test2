@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calificacion_repartidores",
+  "info": {
+    "name": "CalificacionRepartidores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "puntaje": {
+      "type": "integer"
+    },
+    "comentario": {
+      "type": "text"
+    },
+    "repartidor": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "orden": {
+      "model": "ordenes"
+    }
+  }
+}

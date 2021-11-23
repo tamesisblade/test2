@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/facturacion-usuarios",
+      "handler": "facturacion-usuarios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/facturacion-usuarios/count",
+      "handler": "facturacion-usuarios.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/facturacion-usuarios/:id",
+      "handler": "facturacion-usuarios.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/facturacion-usuarios",
+      "handler": "facturacion-usuarios.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/facturacion-usuarios/:id",
+      "handler": "facturacion-usuarios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/facturacion-usuarios/:id",
+      "handler": "facturacion-usuarios.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

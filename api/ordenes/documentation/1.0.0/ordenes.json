@@ -1,0 +1,1819 @@
+{
+  "paths": {
+    "/ordenes": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the ordenes's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve ordenes document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ordenes"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new ordenes record",
+        "responses": {
+          "200": {
+            "description": "Retrieve ordenes document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ordenes"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewOrdenes"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ordenes/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the number of ordenes documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve ordenes document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": []
+      }
+    },
+    "/ordenes/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one ordenes record",
+        "responses": {
+          "200": {
+            "description": "Retrieve ordenes document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ordenes"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single ordenes record",
+        "responses": {
+          "200": {
+            "description": "Retrieve ordenes document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ordenes"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewOrdenes"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single ordenes record",
+        "responses": {
+          "200": {
+            "description": "deletes a single ordenes based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/orden/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/pedidos/{lat}&{long}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "lat",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "long",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/pedidosuser/{usuario}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "usuario",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/pedidosrep/{repartidor}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "repartidor",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/pago/{idempresa}&{idusuario}": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ordenesDespacho": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ordenescooter/{idorden}&{idusuario}": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ordenbuscar/{idusuario}": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/finalizar/{idorden}&{efectivo}": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ordenes"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Ordenes": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "usuario": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nombres": {
+                "type": "string"
+              },
+              "apellidos": {
+                "type": "string"
+              },
+              "cedula": {
+                "type": "integer"
+              },
+              "perfil": {
+                "type": "string"
+              },
+              "empresas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "telefono": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "terminos_y_condiciones": {
+                "type": "boolean"
+              },
+              "direcciones_usuarios": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "estado": {
+            "type": "boolean",
+            "default": false
+          },
+          "facturacion_usuario": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombres": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "correo": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "usuario": {
+                "type": "string"
+              },
+              "cedula": {
+                "type": "integer"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "direcciones_usuario": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "latitud": {
+                "type": "number"
+              },
+              "longitud": {
+                "type": "number"
+              },
+              "referencia": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "usuario": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "ordene": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "pagado": {
+            "type": "boolean",
+            "default": false
+          },
+          "payphone": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "usuario": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "celular": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "empresa": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "descripcion": {
+                "type": "string"
+              },
+              "pagina_web": {
+                "type": "string"
+              },
+              "ruc": {
+                "type": "integer"
+              },
+              "telefono": {
+                "type": "integer"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "productos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "categorias": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "sucursales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "configuracion": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "user": {
+                "type": "string"
+              },
+              "comisionBmas": {
+                "type": "number"
+              },
+              "horario_empresas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "calificacion_empresas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "aceptar_pedidos": {
+                "type": "boolean"
+              },
+              "totalkms": {
+                "type": "number"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "entregaEmpresa": {
+            "type": "boolean",
+            "default": false
+          },
+          "entregaScooter": {
+            "type": "boolean",
+            "default": false
+          },
+          "entregaFinalizado": {
+            "type": "boolean",
+            "default": false
+          },
+          "pagoEfectivo": {
+            "type": "boolean",
+            "default": true
+          },
+          "sucursal": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "telefono": {
+                "type": "integer"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "empresa": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "repartidor": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nombres": {
+                "type": "string"
+              },
+              "apellidos": {
+                "type": "string"
+              },
+              "cedula": {
+                "type": "integer"
+              },
+              "perfil": {
+                "type": "string"
+              },
+              "empresas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "telefono": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "terminos_y_condiciones": {
+                "type": "boolean"
+              },
+              "direcciones_usuarios": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "distancia_empresa": {
+            "type": "string"
+          },
+          "duracion_empresa": {
+            "type": "string"
+          },
+          "distancia_cliente": {
+            "type": "string"
+          },
+          "duracion_cliente": {
+            "type": "string"
+          },
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "subtotal_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "total_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "km_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "configuracion": {
+            "type": "object"
+          },
+          "polyline": {
+            "type": "string"
+          },
+          "porcentaje": {
+            "type": "number"
+          },
+          "comisionBmas": {
+            "type": "number"
+          },
+          "id_orden_contifico": {
+            "type": "string"
+          },
+          "ordenes_productos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "cantidad"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "orden": {
+                  "type": "string"
+                },
+                "producto": {
+                  "type": "string"
+                },
+                "cantidad": {
+                  "type": "integer"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "pago_recibido": {
+            "type": "boolean",
+            "default": false
+          },
+          "acepta_empresa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "acepta_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recoge_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "entrega_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "efectivo_cliente": {
+            "type": "number",
+            "default": 0
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewOrdenes": {
+        "properties": {
+          "usuario": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "boolean",
+            "default": false
+          },
+          "facturacion_usuario": {
+            "type": "string"
+          },
+          "direcciones_usuario": {
+            "type": "string"
+          },
+          "pagado": {
+            "type": "boolean",
+            "default": false
+          },
+          "payphone": {
+            "type": "string"
+          },
+          "empresa": {
+            "type": "string"
+          },
+          "entregaEmpresa": {
+            "type": "boolean",
+            "default": false
+          },
+          "entregaScooter": {
+            "type": "boolean",
+            "default": false
+          },
+          "entregaFinalizado": {
+            "type": "boolean",
+            "default": false
+          },
+          "pagoEfectivo": {
+            "type": "boolean",
+            "default": true
+          },
+          "sucursal": {
+            "type": "string"
+          },
+          "repartidor": {
+            "type": "string"
+          },
+          "distancia_empresa": {
+            "type": "string"
+          },
+          "duracion_empresa": {
+            "type": "string"
+          },
+          "distancia_cliente": {
+            "type": "string"
+          },
+          "duracion_cliente": {
+            "type": "string"
+          },
+          "total": {
+            "type": "number",
+            "default": 0
+          },
+          "subtotal_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "total_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "km_delivery": {
+            "type": "number",
+            "default": 0
+          },
+          "configuracion": {
+            "type": "object"
+          },
+          "polyline": {
+            "type": "string"
+          },
+          "porcentaje": {
+            "type": "number"
+          },
+          "comisionBmas": {
+            "type": "number"
+          },
+          "id_orden_contifico": {
+            "type": "string"
+          },
+          "ordenes_productos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pago_recibido": {
+            "type": "boolean",
+            "default": false
+          },
+          "acepta_empresa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "acepta_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recoge_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "entrega_repartidor": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "efectivo_cliente": {
+            "type": "number",
+            "default": 0
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Ordenes"
+    }
+  ]
+}

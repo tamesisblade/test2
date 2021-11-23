@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/calificacion-empresas",
+      "handler": "calificacion-empresas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/calificacion-empresas/count",
+      "handler": "calificacion-empresas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/calificacion-empresas/:id",
+      "handler": "calificacion-empresas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/calificacion-empresas",
+      "handler": "calificacion-empresas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/calificacion-empresas/:id",
+      "handler": "calificacion-empresas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/calificacion-empresas/:id",
+      "handler": "calificacion-empresas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

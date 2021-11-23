@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/horarios",
+      "handler": "horarios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/horarios/count",
+      "handler": "horarios.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/horarios/:id",
+      "handler": "horarios.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/horarios",
+      "handler": "horarios.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/horarios/:id",
+      "handler": "horarios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/horarios/:id",
+      "handler": "horarios.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

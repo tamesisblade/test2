@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rutas",
+  "info": {
+    "name": "rutas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "orden": {
+      "unique": true,
+      "model": "ordenes"
+    },
+    "repartidor": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "latitud": {
+      "type": "float"
+    },
+    "longitud": {
+      "type": "float"
+    }
+  }
+}

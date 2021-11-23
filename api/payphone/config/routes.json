@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payphones",
+      "handler": "payphone.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payphones/count",
+      "handler": "payphone.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payphones/:id",
+      "handler": "payphone.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payphones",
+      "handler": "payphone.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payphones/:id",
+      "handler": "payphone.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payphones/:id",
+      "handler": "payphone.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

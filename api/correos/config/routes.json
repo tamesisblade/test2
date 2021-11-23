@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/correos",
+      "handler": "correos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enviar",
+      "handler": "correos.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/correos/count",
+      "handler": "correos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/correos/:id",
+      "handler": "correos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/correos",
+      "handler": "correos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/correos/:id",
+      "handler": "correos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/correos/:id",
+      "handler": "correos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

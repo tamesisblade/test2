@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paises",
+  "info": {
+    "name": "Paises",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "codigo": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "moneda": {
+      "type": "string"
+    },
+    "impuesto": {
+      "type": "decimal"
+    },
+    "porcentaje_competencia": {
+      "type": "decimal"
+    },
+    "porcentaje_bmas": {
+      "type": "decimal"
+    },
+    "porcentaje_bmas_lluvia": {
+      "type": "decimal"
+    },
+    "valor_km": {
+      "type": "decimal"
+    },
+    "valor_km_lluvia": {
+      "type": "decimal"
+    },
+    "porcentaje_chofer": {
+      "type": "decimal"
+    },
+    "simbolo": {
+      "type": "string"
+    },
+    "km_redonda": {
+      "type": "decimal"
+    }
+  }
+}

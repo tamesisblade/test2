@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facturacion_usuarios",
+  "info": {
+    "name": "FacturacionUsuarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombres": {
+      "type": "text"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "correo": {
+      "type": "email"
+    },
+    "estado": {
+      "type": "boolean"
+    },
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "cedula": {
+      "type": "biginteger"
+    }
+  }
+}

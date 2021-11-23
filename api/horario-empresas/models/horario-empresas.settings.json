@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horario_empresas",
+  "info": {
+    "name": "horarioEmpresas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "empresa": {
+      "via": "horario_empresas",
+      "model": "empresas"
+    },
+    "hora_inicio": {
+      "type": "time",
+      "required": false
+    },
+    "hora_final": {
+      "type": "time",
+      "required": false
+    },
+    "dias": {
+      "collection": "dias",
+      "via": "horario_empresa"
+    }
+  }
+}

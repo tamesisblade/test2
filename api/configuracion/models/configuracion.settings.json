@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configuracions",
+  "info": {
+    "name": "Configuraciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "arranque": {
+      "type": "decimal"
+    },
+    "valor_km": {
+      "type": "decimal"
+    },
+    "iva": {
+      "type": "decimal"
+    },
+    "valor_minimo": {
+      "type": "decimal"
+    },
+    "arranque_repartidor": {
+      "type": "decimal"
+    },
+    "horarios": {
+      "collection": "horarios"
+    },
+    "terminos_y_condiciones": {
+      "type": "richtext"
+    }
+  }
+}

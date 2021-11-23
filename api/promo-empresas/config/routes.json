@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/promo-empresas",
+      "handler": "promo-empresas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/promo-empresas/count",
+      "handler": "promo-empresas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/promo-empresas/:id",
+      "handler": "promo-empresas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/promo-empresas",
+      "handler": "promo-empresas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/promo-empresas/:id",
+      "handler": "promo-empresas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/promo-empresas/:id",
+      "handler": "promo-empresas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

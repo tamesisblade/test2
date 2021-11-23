@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promociones",
+  "info": {
+    "name": "Promociones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "porcentaje": {
+      "type": "decimal"
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "estado": {
+      "type": "boolean",
+      "default": true
+    },
+    "productos": {
+      "via": "promocione",
+      "collection": "productos"
+    },
+    "empresa": {
+      "model": "empresas"
+    }
+  }
+}

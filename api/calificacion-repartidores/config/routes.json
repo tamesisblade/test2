@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/calificacion-repartidores",
+      "handler": "calificacion-repartidores.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/calificacion-repartidores/count",
+      "handler": "calificacion-repartidores.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/calificacion-repartidores/:id",
+      "handler": "calificacion-repartidores.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/calificacion-repartidores",
+      "handler": "calificacion-repartidores.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/calificacion-repartidores/:id",
+      "handler": "calificacion-repartidores.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/calificacion-repartidores/:id",
+      "handler": "calificacion-repartidores.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/producto-empresa-stocks",
+      "handler": "producto-empresa-stock.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-empresa-stocks/count",
+      "handler": "producto-empresa-stock.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-empresa-stocks/:id",
+      "handler": "producto-empresa-stock.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/producto-empresa-stocks",
+      "handler": "producto-empresa-stock.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/producto-empresa-stocks/:id",
+      "handler": "producto-empresa-stock.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/producto-empresa-stocks/:id",
+      "handler": "producto-empresa-stock.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

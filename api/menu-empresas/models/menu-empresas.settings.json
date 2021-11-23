@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_empresas",
+  "info": {
+    "name": "MenuEmpresas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "orden": {
+      "type": "integer"
+    },
+    "url": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "perfil": {
+      "model": "perfiles"
+    }
+  }
+}

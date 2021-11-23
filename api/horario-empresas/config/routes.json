@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/horario-empresas",
+      "handler": "horario-empresas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/horario-empresas/count",
+      "handler": "horario-empresas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/horario-empresas/:id",
+      "handler": "horario-empresas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/horario-empresas",
+      "handler": "horario-empresas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/horario-empresas/:id",
+      "handler": "horario-empresas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/horario-empresas/:id",
+      "handler": "horario-empresas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
